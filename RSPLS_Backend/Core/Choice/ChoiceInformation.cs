@@ -2,5 +2,5 @@
 
 namespace Core.Choice
 {
-    public record ChoiceInformation([property: JsonPropertyName("id")] int Id, [property: JsonPropertyName("name")] string Name);
+    public record ChoiceInformation([property: JsonPropertyName("id")] Choice Id, [property: JsonPropertyName("name")] string Name);
 }

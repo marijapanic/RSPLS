@@ -67,7 +67,7 @@ namespace Application.Tests
         {
             return Enum.GetValues(typeof(Choice))
                 .Cast<Choice>()
-                .Select(choice => new ChoiceInformation((int)choice, choice.ToString().ToLower()))
+                .Select(choice => new ChoiceInformation(choice, choice.ToString().ToLower()))
                 .ToArray();
         }
     }
