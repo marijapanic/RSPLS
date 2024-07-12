@@ -1,4 +1,5 @@
 using Application;
+using Core.Choice;
 using Core.Shared;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +13,7 @@ namespace Game
         [Function("GetAllChoices")]
         public static IActionResult GetAllChoices([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "choices")] HttpRequest req)
         {
-            Result<string[]> choicesResult = _choiceService.GelAllAvailableChoices();
+            Result<ChoiceInformation[]> choicesResult = _choiceService.GelAllAvailableChoices();
 
             // TODO logging
             if (choicesResult.IsFailure)
@@ -26,7 +27,7 @@ namespace Game
         [Function("GetSingleChoice")]
         public static IActionResult GetSingleChoice([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "choice")] HttpRequest req)
         {
-            Result<string> choicesResult = _choiceService.GetRandomChoice();
+            Result<ChoiceInformation> choicesResult = _choiceService.GetRandomChoice();
 
             // TODO logging
             if (choicesResult.IsFailure)
