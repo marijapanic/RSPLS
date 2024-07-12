@@ -10,6 +10,15 @@ namespace Application
 
         }
 
+        public Result<string[]> GelAllAvailableChoices()
+        {
+            string[] choices = Enum.GetNames(typeof(Choice))
+                .Select(name => name.ToLower())
+                .ToArray();
+
+            return Result<string[]>.Success(choices);
+        }
+
         public Result<string> GetRandomChoice()
         {
             Choice? randomChoice = RandomizeChoice();
