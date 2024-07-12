@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/RSPLS_Backend/Application/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+/RSPLS_Backend/Application/obj/Debug/net8.0
+/RSPLS_Backend/Core/obj/Debug/net8.0
+/RSPLS_Backend/.vs/RSPLS_Backend/FileContentIndex/dfcab441-697d-4000-b249-f2096b51ba34.vsidx
+/RSPLS_Backend/.vs/RSPLS_Backend/v17
+/RSPLS_Backend/Application/obj
+/RSPLS_Backend/Core/bin/Debug/net8.0
+/RSPLS_Backend/Core/obj
+/RSPLS_Backend/Application/bin/Debug/net8.0
