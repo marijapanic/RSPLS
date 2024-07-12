@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Marija\\source\\repos\\RPSLS\\RSPLS_Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1BF2408C-A3A6-4949-AF58-CA39497BE6B4}|Application\\Application.csproj|c:\\users\\marija\\source\\repos\\rpsls\\rspls_backend\\application\\choiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF2408C-A3A6-4949-AF58-CA39497BE6B4}|Application\\Application.csproj|solutionrelative:application\\choiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21245BC5-1166-4811-B109-4BA5AEC698DC}|Core\\Core.csproj|c:\\users\\marija\\source\\repos\\rpsls\\rspls_backend\\core\\shared\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21245BC5-1166-4811-B109-4BA5AEC698DC}|Core\\Core.csproj|solutionrelative:core\\shared\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{50591276-2122-4802-9241-BACA21AE239E}|Game\\Game.csproj|c:\\users\\marija\\source\\repos\\rpsls\\rspls_backend\\game\\choices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50591276-2122-4802-9241-BACA21AE239E}|Game\\Game.csproj|solutionrelative:game\\choices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50591276-2122-4802-9241-BACA21AE239E}|Game\\Game.csproj|c:\\users\\marija\\source\\repos\\rpsls\\rspls_backend\\game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50591276-2122-4802-9241-BACA21AE239E}|Game\\Game.csproj|solutionrelative:game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50591276-2122-4802-9241-BACA21AE239E}|Game\\Game.csproj|c:\\users\\marija\\source\\repos\\rpsls\\rspls_backend\\game\\play.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50591276-2122-4802-9241-BACA21AE239E}|Game\\Game.csproj|solutionrelative:game\\play.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 19,
+          "SelectedChildIndex": 18,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,39 +94,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Play.cs",
-              "DocumentMoniker": "C:\\Users\\Marija\\source\\repos\\RPSLS\\RSPLS_Backend\\Game\\Play.cs",
-              "RelativeDocumentMoniker": "Game\\Play.cs",
-              "ToolTip": "C:\\Users\\Marija\\source\\repos\\RPSLS\\RSPLS_Backend\\Game\\Play.cs",
-              "RelativeToolTip": "Game\\Play.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-12T12:31:35.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Marija\\source\\repos\\RPSLS\\RSPLS_Backend\\Game\\Program.cs",
-              "RelativeDocumentMoniker": "Game\\Program.cs",
-              "ToolTip": "C:\\Users\\Marija\\source\\repos\\RPSLS\\RSPLS_Backend\\Game\\Program.cs",
-              "RelativeToolTip": "Game\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Title": "Result.cs",
+              "DocumentMoniker": "C:\\Users\\Marija\\source\\repos\\RPSLS\\RSPLS_Backend\\Core\\Shared\\Result.cs",
+              "RelativeDocumentMoniker": "Core\\Shared\\Result.cs",
+              "ToolTip": "C:\\Users\\Marija\\source\\repos\\RPSLS\\RSPLS_Backend\\Core\\Shared\\Result.cs",
+              "RelativeToolTip": "Core\\Shared\\Result.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAgwDcAAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-12T12:30:53.515Z",
+              "WhenOpened": "2024-07-12T13:31:18.77Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ChoiceService.cs",
+              "DocumentMoniker": "C:\\Users\\Marija\\source\\repos\\RPSLS\\RSPLS_Backend\\Application\\ChoiceService.cs",
+              "RelativeDocumentMoniker": "Application\\ChoiceService.cs",
+              "ToolTip": "C:\\Users\\Marija\\source\\repos\\RPSLS\\RSPLS_Backend\\Application\\ChoiceService.cs",
+              "RelativeToolTip": "Application\\ChoiceService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T13:20:14.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Choices.cs",
               "DocumentMoniker": "C:\\Users\\Marija\\source\\repos\\RPSLS\\RSPLS_Backend\\Game\\Choices.cs",
               "RelativeDocumentMoniker": "Game\\Choices.cs",
               "ToolTip": "C:\\Users\\Marija\\source\\repos\\RPSLS\\RSPLS_Backend\\Game\\Choices.cs",
               "RelativeToolTip": "Game\\Choices.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-12T12:28:59.44Z",
               "EditorCaption": ""
