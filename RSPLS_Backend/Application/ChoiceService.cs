@@ -10,25 +10,26 @@ namespace Application
 
         }
 
-        public Result<string[]> GelAllAvailableChoices()
+        public Result<ChoiceInformation[]> GelAllAvailableChoices()
         {
-            string[] choices = Enum.GetNames(typeof(Choice))
-                .Select(name => name.ToLower())
+            ChoiceInformation[] choices = Enum.GetValues(typeof(Choice))
+                .Cast<Choice>()
+                .Select(choice => new ChoiceInformation((int)choice, choice.ToString().ToLower()))
                 .ToArray();
 
-            return Result<string[]>.Success(choices);
+            return Result<ChoiceInformation[]>.Success(choices);
         }
 
-        public Result<string> GetRandomChoice()
+        public Result<ChoiceInformation> GetRandomChoice()
         {
             Choice? randomChoice = RandomizeChoice();
 
             if (randomChoice is null)
             {
-                return Result<string>.Failure(Error.None);
+                return Result<ChoiceInformation>.Failure(Error.None);
             }
 
-            return Result<string>.Success(randomChoice.ToString()!.ToLower());
+            return Result<ChoiceInformation>.Success(new ChoiceInformation((int)randomChoice, randomChoice.ToString()!.ToLower()));
         }
 
         static Choice? RandomizeChoice()

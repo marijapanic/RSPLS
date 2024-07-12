@@ -12,12 +12,13 @@ namespace Application.Tests
         {
             service = new ChoiceService();
         }
+
         [Test]
         public void GelAllAvailableChoices_ReturnsAllChoicesInLowerCase()
         {
-            string[] expected = GetAllChoiceValues();
+            ChoiceInformation[] expected = GetAllChoiceValues();
 
-            Result<string[]> result = service.GelAllAvailableChoices();
+            Result<ChoiceInformation[]> result = service.GelAllAvailableChoices();
 
             Assert.Multiple(() =>
             {
@@ -30,9 +31,9 @@ namespace Application.Tests
         [Test]
         public void GetRandomChoice_ReturnsValidChoice()
         {
-            string[] expected = GetAllChoiceValues();
+            ChoiceInformation[] expected = GetAllChoiceValues();
 
-            Result<string> result = service.GetRandomChoice();
+            Result<ChoiceInformation> result = service.GetRandomChoice();
 
             Assert.Multiple(() =>
             {
@@ -44,8 +45,8 @@ namespace Application.Tests
         [Test]
         public void GetRandomChoice_MultipleCalls_ReturnsRandomChoiceFromSet()
         {
-            string[] expected = GetAllChoiceValues();
-            Result<string>[] results = new Result<string>[RANDOMIZE_COUNT];
+            ChoiceInformation[] expected = GetAllChoiceValues();
+            Result<ChoiceInformation>[] results = new Result<ChoiceInformation>[RANDOMIZE_COUNT];
 
             for (int i = 0; i < RANDOMIZE_COUNT; i++)
             {
@@ -62,11 +63,11 @@ namespace Application.Tests
             }
         }
 
-        private static string[] GetAllChoiceValues()
+        private static ChoiceInformation[] GetAllChoiceValues()
         {
-            return Enum
-                .GetNames(typeof(Choice))
-                .Select(name => name.ToLower())
+            return Enum.GetValues(typeof(Choice))
+                .Cast<Choice>()
+                .Select(choice => new ChoiceInformation((int)choice, choice.ToString().ToLower()))
                 .ToArray();
         }
     }
