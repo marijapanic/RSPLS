@@ -6,13 +6,13 @@ interface Props {
 }
 
 export default function ChoiceOptions(props: Props) {
-    const { choices, error } = usePlayerChoices();
+    const { choices, error, isLoading } = usePlayerChoices();
 
     if (error) {
         return <div>Error loading choices</div>;
     }
 
-    if (!choices) {
+    if (isLoading) {
         throw new Promise(() => { }); // Keep suspending until choices are available
     }
 
