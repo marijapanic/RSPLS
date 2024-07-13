@@ -1,0 +1,28 @@
+.header {
+    line-height: 1.2;
+    text-align: center;
+}
+
+.secondary {
+    font-size: 125%;
+    color: #32373f;
+}
+
+.primary {
+    font-size: 130%;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.break {
+    opacity: 0.6;
+    border-width: 0px 0px 1px;
+    border-image: initial;
+    border-style: solid;
+    width: 100%;
+    border-color: rgb(255, 222, 89);
+    margin-bottom: 1em !important;
+    margin-top: 1em !important;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
