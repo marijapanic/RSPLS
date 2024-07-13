@@ -2,10 +2,9 @@
 import PlayerContainer from "../PlayerContainer";
 import { Suspense } from "react";
 import LoadingOptions from "../Choice/loadingOptions";
-import ChoicesGrid from "../Choice/choiceGrid";
-import { getPlayerChoices } from "@/agent/agent";
 import { UseGameContext } from "@/store/GameContext";
 import setDecisionUser from "@/actions/decisionUser";
+import ChoiceOptions from "./choiceOptions";
 
 export function UserPlayer() {
     const gameContext = UseGameContext();
@@ -35,13 +34,4 @@ export function UserPlayer() {
     );
 }
 
-interface Props {
-    handleChoiceClick: (id: number, name: string) => {}
-}
-
-async function ChoiceOptions(props: Props) {
-    const response = await getPlayerChoices();
-
-    return <ChoicesGrid choices={response} handleChoiceClick={props.handleChoiceClick}></ChoicesGrid>
-}
 

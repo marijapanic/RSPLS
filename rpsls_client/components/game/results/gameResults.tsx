@@ -12,7 +12,9 @@ export default function GameResults()
         borderStyle: "solid",
         justifyContent: "center",
         borderColor: "#fff",
-        minHeight: "120px"}}>
+        minHeight: "120px",
+        p: "1em"
+        }}>
             <Stack p="4">
                 <h2>Computer</h2>
                 <p>{gameContext.state.games.computer}</p>

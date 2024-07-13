@@ -1,7 +1,5 @@
-"use client"
-import { ReactElement, useContext, useState } from "react";
 import styles from "@/components/game/section/gameSection.module.css";
-import { Box, Container, Grid, Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import GameHeader from "./gameNotification/gameNotification";
 import { UserPlayer } from "./players/userPlayer/userPlayer";
 import ComputerPlayer from "./players/ComputerPlayer/computerPlayer";
@@ -14,11 +12,11 @@ export default function GameSection() {
     <GameContextProvider>
       <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5em", width: "100%" }}>
         <GameHeader></GameHeader>
-        <Stack direction={"row"} alignItems="center" display="grid" gap="1em" gridTemplateColumns="repeat(2, minmax(0, 1fr))">
-          <Grid>
+        <Stack direction="column" gap="2em">
+          <Stack direction={"row"} alignItems="center" display="grid" gap="1em" gridTemplateColumns="repeat(2, minmax(0, 1fr))">
             <UserPlayer></UserPlayer>
             <ComputerPlayer></ComputerPlayer>
-          </Grid>
+          </Stack>
 
           <GameResults></GameResults>
 
