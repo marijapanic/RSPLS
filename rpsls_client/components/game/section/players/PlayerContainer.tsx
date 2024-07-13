@@ -18,7 +18,7 @@ export default function PlayerContainer(props: Props) {
             minHeight: "120px",
             p: "1em"
         }}>
-            <Stack direction="column" justifyContent="space-evenly">
+            <Stack direction="column" justifyContent="space-evenly" alignItems="center">
                 <Box sx={{ textAlign: "center" }}>
                     <h2>{props.userChoice}</h2>
                 </Box>

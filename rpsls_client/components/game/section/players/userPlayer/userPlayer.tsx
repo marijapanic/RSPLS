@@ -1,12 +1,14 @@
 "use client"
 import PlayerContainer from "../PlayerContainer";
-import { Suspense } from "react";
-import LoadingOptions from "../Choice/loadingOptions";
 import { UseGameContext } from "@/store/GameContext";
 import setDecisionUser from "@/actions/decisionUser";
-import ChoiceOptions from "./choiceOptions";
+import { ChoiceState } from "@/models/choiceState";
+import ChoicesGrid from "../Choice/choiceGrid";
+interface Props {
+    choices: Array<ChoiceState>
+}
 
-export function UserPlayer() {
+export function UserPlayer(props: Props) {
     const gameContext = UseGameContext();
 
     async function onChoiceClick(id: number, name: string) {
@@ -16,7 +18,11 @@ export function UserPlayer() {
                 name
             }
         });
-        gameContext.updateState(finalResult);
+
+        gameContext.updateState(finalResult, {
+            user: name,
+            computer: props.choices[finalResult.computersChoice].name
+        });
     }
     
     return (
@@ -24,9 +30,7 @@ export function UserPlayer() {
             <>
                 {gameContext.state.result.label === '' && gameContext.state.decision.user === '' &&
                     (
-                        <Suspense fallback={<LoadingOptions></LoadingOptions>}>
-                            <ChoiceOptions handleChoiceClick={onChoiceClick}/>
-                        </Suspense>
+                        <ChoicesGrid choices={props.choices} handleChoiceClick={onChoiceClick}></ChoicesGrid>
                     )}
                 {gameContext.state.decision.user !== '' && <p>{gameContext.state.decision.user}</p>}
             </>

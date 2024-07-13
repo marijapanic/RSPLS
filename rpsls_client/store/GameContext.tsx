@@ -1,6 +1,6 @@
 "use client"
 
-import { State } from "@/models/gameState";
+import { Decision, State } from "@/models/gameState";
 import React, { Dispatch, SetStateAction, useContext } from "react";
 import { createContext } from "react";
 
@@ -26,13 +26,14 @@ export interface IGameContext {
     setState: Dispatch<SetStateAction<State>>,
     clearGame: () => void,
     clearAll: () => void,
-    updateState: (result: IGameResponse) => void
+    updateState: (result: IGameResponse, decision: Decision) => void
 }
 
 export interface IGameResponse {
     judgement: string,
     computer: number,
     user: number,
+    computersChoice: number
 }
 
 export const GameContext = createContext<IGameContext>({
@@ -40,7 +41,7 @@ export const GameContext = createContext<IGameContext>({
     setState: () => { },
     clearGame: () => { },
     clearAll: () => { },
-    updateState: (result: IGameResponse) => {}
+    updateState: (result: IGameResponse, decision: Decision) => {}
 });
 
 export function GameContextProvider({ children }: { children: React.ReactNode }) {
@@ -62,14 +63,14 @@ export function GameContextProvider({ children }: { children: React.ReactNode })
         setState(defaultState);
     }
 
-    function updateState(result: IGameResponse)
+    function updateState(result: IGameResponse, decision: Decision)
     {
         setState((prevState: State) => ({
             ...prevState,
             decision: {
                 ...prevState.decision,
-                computer: "todo",
-                user: "todo",
+                computer: decision.computer,
+                user: decision.user,
             },
             games: {
                 total: prevState.games.total + 1,

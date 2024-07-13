@@ -8,13 +8,14 @@ enum ResponseBuilder {
 }
 
 export default function getFinalResult(payload: GameResult): IGameResponse {
-    const { results } = payload;
+    const { results, computer } = payload;
 
     if (results == ResponseBuilder.Tie) {
         return {
             judgement: 'It’s a tie.',
             computer: 0,
             user: 0,
+            computersChoice: computer
         };
     }
 
@@ -23,6 +24,7 @@ export default function getFinalResult(payload: GameResult): IGameResponse {
             judgement: 'Computer wins…',
             computer: 1,
             user: 0,
+            computersChoice: computer
         };
     }
 
@@ -30,5 +32,6 @@ export default function getFinalResult(payload: GameResult): IGameResponse {
         judgement: 'You win!!!',
         computer: 0,
         user: 1,
+        computersChoice: computer
     };
 };

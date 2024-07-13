@@ -6,6 +6,9 @@ import ComputerPlayer from "./players/ComputerPlayer/computerPlayer";
 import GameResults from "../results/gameResults";
 import GameControlsResets from "../controls/gameControlsResets";
 import { GameContextProvider } from "@/store/GameContext";
+import { getPlayerChoices } from "@/agent/agent";
+import { Suspense } from "react";
+import LoadingOptions from "./players/Choice/loadingOptions";
 
 export default function GameSection() {
   return (
@@ -14,8 +17,9 @@ export default function GameSection() {
         <GameHeader></GameHeader>
         <Stack direction="column" gap="2em">
           <Stack direction={"row"} alignItems="center" display="grid" gap="1em" gridTemplateColumns="repeat(2, minmax(0, 1fr))">
-            <UserPlayer></UserPlayer>
-            <ComputerPlayer></ComputerPlayer>
+            <Suspense fallback={<LoadingOptions></LoadingOptions>}>
+              <LoadGame></LoadGame>
+            </Suspense>
           </Stack>
 
           <GameResults></GameResults>
@@ -24,5 +28,16 @@ export default function GameSection() {
         </Stack>
       </Box>
     </GameContextProvider>
+  );
+}
+
+async function LoadGame() {
+  const response = await getPlayerChoices();
+
+  return (
+    <>
+      <UserPlayer choices={response}></UserPlayer>
+      <ComputerPlayer></ComputerPlayer>
+    </>
   );
 }
