@@ -15,15 +15,15 @@ export default function GameResults()
         minHeight: "120px",
         p: "1em"
         }}>
-            <Stack p="4">
+            <Stack p="1em" display="flex" alignItems="center">
                 <h2>Computer</h2>
                 <p>{gameContext.state.games.computer}</p>
             </Stack>
-            <Stack p="4">
+            <Stack p="1em" display="flex" alignItems="center">
                 <h2>Games:</h2>
                 <p>{gameContext.state.games.total}</p>
             </Stack>
-            <Stack p="4">
+            <Stack p="1em" display="flex" alignItems="center">
                 <h2>User:</h2>
                 <p>{gameContext.state.games.user}</p>
             </Stack>

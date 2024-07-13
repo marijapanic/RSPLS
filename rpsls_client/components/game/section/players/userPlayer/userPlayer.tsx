@@ -20,7 +20,7 @@ export function UserPlayer() {
     }
     
     return (
-        <PlayerContainer userChoice={`${gameContext.state.decision.user === '' ? 'Make ' : ''} your choice`}>
+        <PlayerContainer userChoice={`${gameContext.state.decision.user === '' ? 'Make y' : 'Y'}our choice`}>
             <>
                 {gameContext.state.result.label === '' && gameContext.state.decision.user === '' &&
                     (

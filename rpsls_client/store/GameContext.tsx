@@ -69,6 +69,7 @@ export function GameContextProvider({ children }: { children: React.ReactNode })
             decision: {
                 ...prevState.decision,
                 computer: "todo",
+                user: "todo",
             },
             games: {
                 total: prevState.games.total + 1,

@@ -1,11 +1,16 @@
 import { GameResult } from "@/models/choiceState";
 import { IGameResponse } from "@/store/GameContext";
 
+enum ResponseBuilder {
+    Win = "win",
+    Lose = "lose",
+    Tie = "tie"
+}
 
-export default function getFinalResult(payload: GameResult) : IGameResponse {
+export default function getFinalResult(payload: GameResult): IGameResponse {
     const { results } = payload;
 
-    if (results == "tie") {
+    if (results == ResponseBuilder.Tie) {
         return {
             judgement: 'It’s a tie.',
             computer: 0,
@@ -13,7 +18,7 @@ export default function getFinalResult(payload: GameResult) : IGameResponse {
         };
     }
 
-    if (results == "lose") {
+    if (results == ResponseBuilder.Lose) {
         return {
             judgement: 'Computer wins…',
             computer: 1,
