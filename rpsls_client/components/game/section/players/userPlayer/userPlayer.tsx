@@ -9,17 +9,16 @@ import { UseGameContext } from "@/store/GameContext";
 export function UserPlayer() {
     const gameContext = UseGameContext()
     return (
-        <PlayerContainer userChoice="`${state.decision.user === '' ? 'Make ' : ''}` your choice">
+        <PlayerContainer userChoice={`${gameContext.state.decision.user === '' ? 'Make ' : ''} your choice`}>
             <>
                 {gameContext.state.result.label === '' && gameContext.state.decision.user === '' &&
                     (
                         <Suspense fallback={<LoadingOptions></LoadingOptions>}>
-                            <ChoiceOptions></ChoiceOptions>
+                            <ChoiceOptions />
                         </Suspense>
                     )}
                 {gameContext.state.decision.user !== '' && <p>{gameContext.state.decision.user}</p>}
             </>
-
         </PlayerContainer>
     );
 }
