@@ -34,7 +34,7 @@ namespace Application
             // TODO: logic for examining the choices.
 
             return Result<GameOutcome>.Success(new GameOutcome(
-                GameResult.Win, playerChoice.Data.Choice, choiceResult.Data.Id));
+                GameResult.Win.ToString(), playerChoice.Data.Choice, choiceResult.Data.Id));
         }
 
         private static async Task<Result<PlayerChoice>> ExtractPlayersChoice(HttpRequest httpRequest)

@@ -21,7 +21,7 @@ namespace Game
             {
                 return new BadRequestResult();
             }
-            return new OkResult();
+            return new OkObjectResult(result.Data);
         }
     }
 }
