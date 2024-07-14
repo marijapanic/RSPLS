@@ -8,3 +8,4 @@
 /RSPLS_Backend/.vs/
 /RSPLS_Backend/Application.Tests/bin
 /RSPLS_Backend/Application.Tests/obj
+/rpsls_client/package-lock.json
