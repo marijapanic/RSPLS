@@ -1,7 +1,6 @@
 import { ChoiceState, GameResult } from "@/models/choiceState";
 
-export async function getPlayerChoices() : Promise<Array<ChoiceState>>
-{
+export async function getPlayerChoices(): Promise<Array<ChoiceState>> {
     try {
         const optionsResponse = await fetch(`${process.env.NEXT_PUBLIC_CHOICES_DOMAIN}/api/choices`);
 
@@ -12,8 +11,7 @@ export async function getPlayerChoices() : Promise<Array<ChoiceState>>
     }
 }
 
-export async function getGameResult(userDecision: number) : Promise<GameResult>
-{
+export async function getGameResult(userDecision: number): Promise<GameResult> {
     try {
         const optionsResponse = await fetch(`${process.env.NEXT_PUBLIC_CHOICES_DOMAIN}/api/play`, {
             method: 'POST',
