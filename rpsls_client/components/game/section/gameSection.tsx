@@ -37,7 +37,7 @@ async function LoadGame() {
 
   if (!response.length)
   {
-    return <Typography>We couldn't retrieve the available options</Typography>
+    return <Typography>We couldn&#39;t retrieve the available options</Typography>
   }
 
   return (
