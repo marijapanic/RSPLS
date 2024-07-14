@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "docker-development": "docker build -t rspls_client_development -f dockerfile.development .",
+    "docker-production": "docker build -t rspls_client_production -f dockerfile.production .",
+    "run-development": "docker run -p 3000:3000 rspls_client_development",
+    "run-production": "docker run -p 3000:3000 rspls_client_production"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",

@@ -4,12 +4,12 @@
 }
 
 .secondary {
-    font-size: 125%;
-    color: #808690;
+    font-size: 100%;
+    color: #718096;
 }
 
 .primary {
-    font-size: 130%;
+    font-size: 105%;
     color: rgba(255, 255, 255, 0.92);
 }
 
@@ -18,8 +18,8 @@
     border-width: 0px 0px 1px;
     border-image: initial;
     border-style: solid;
-    width: 100%;
-    border-color: rgb(255, 222, 89);
+    width: 50%;
+    border-color: #f9b331;
     margin-bottom: 1em !important;
     margin-top: 1em !important;
     box-sizing: content-box;
