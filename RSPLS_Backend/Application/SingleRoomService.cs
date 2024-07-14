@@ -31,10 +31,7 @@ namespace Application
                 return Result<GameOutcome>.Failure(choiceResult.Error);
             }
 
-            // TODO: logic for examining the choices.
-
-            return Result<GameOutcome>.Success(new GameOutcome(
-                GameResult.Win.ToString(), playerChoice.Data.Choice, choiceResult.Data.Id));
+            return Result<GameOutcome>.Success(GameFinal.DetermineWinner(playerChoice.Data.Choice, choiceResult.Data.Id));
         }
 
         private static async Task<Result<PlayerChoice>> ExtractPlayersChoice(HttpRequest httpRequest)
