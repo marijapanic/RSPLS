@@ -12,7 +12,7 @@ export default function GameResults()
         borderStyle: "solid",
         justifyContent: "center",
         borderColor: "#fff",
-        minHeight: "120px",
+        minHeight: "7.5em",
         p: "1em"
         }}>
             <Stack p="1em" display="flex" alignItems="center">
