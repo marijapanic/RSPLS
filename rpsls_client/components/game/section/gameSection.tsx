@@ -1,4 +1,3 @@
-import styles from "@/components/game/section/gameSection.module.css";
 import { Box, Stack } from "@mui/material";
 import GameHeader from "./gameNotification/gameNotification";
 import { UserPlayer } from "./players/userPlayer/userPlayer";

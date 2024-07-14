@@ -1,4 +1,4 @@
-import ChoicesGrid from "../Choice/choiceGrid";
+import ChoicesGrid from "./choiceGrid";
 import { usePlayerChoices } from "@/hooks/usePlayerChoices";
 
 interface Props {
