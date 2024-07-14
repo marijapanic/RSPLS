@@ -25,7 +25,7 @@ export function RandomChoice() {
     }
 
     return (
-        <Stack direction="row" display="flex" gap="1em">
+        <Stack direction="row" display="flex" gap="1em" color={"#d3e4f1"}>
             {error && <Alert
                 sx={{
                     position: "absolute",
@@ -34,7 +34,7 @@ export function RandomChoice() {
                 }} variant="filled" severity="error"
                 onClose={() => { setError(false) }}
             >Something went wrong</Alert>}
-            <Button color="warning" onClick={handleGenerateRandomChoice}>
+            <Button color="inherit" variant="outlined" onClick={handleGenerateRandomChoice}>
                 Generate choice
             </Button>
 
