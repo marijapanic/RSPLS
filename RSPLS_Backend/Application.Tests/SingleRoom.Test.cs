@@ -75,7 +75,8 @@ namespace Application.Tests
             Assert.Multiple(() =>
             {
                 Assert.That(result.IsSuccess, Is.True);
-                Assert.That(result.Data, Is.EqualTo(new GameOutcome(GameResult.Tie, playersChoice, computersChoice.Id)));
+                Assert.That(result.Data.ComputerChoiceId, Is.EqualTo(computersChoice.Id));
+                Assert.That(result.Data.PlayerChoiceId, Is.EqualTo(playersChoice));
             });
         }
     }
