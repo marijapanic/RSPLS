@@ -1,5 +1,4 @@
 import { Box, Stack, Typography } from "@mui/material";
-import GameHeader from "./gameNotification/gameNotification";
 import { UserPlayer } from "./players/userPlayer/userPlayer";
 import ComputerPlayer from "./players/ComputerPlayer/computerPlayer";
 import GameResults from "../results/gameResults";
@@ -8,12 +7,13 @@ import { GameContextProvider } from "@/store/GameContext";
 import { getPlayerChoices } from "@/agent/agent";
 import { Suspense } from "react";
 import LoadingOptions from "./players/Choice/loadingOptions";
+import GameResultHeader from "../results/gameResultHeader/GameResultHeader";
 
 export default function GameSection() {
   return (
     <GameContextProvider>
       <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5em", width: "100%" }}>
-        <GameHeader></GameHeader>
+        <GameResultHeader></GameResultHeader>
         <Stack direction="column" gap="2em" alignItems="center">
           <Stack direction={"row"} alignItems="center" display="grid" gap="1em" gridTemplateColumns="repeat(2, minmax(0, 1fr))">
             <Suspense fallback={<LoadingOptions></LoadingOptions>}>

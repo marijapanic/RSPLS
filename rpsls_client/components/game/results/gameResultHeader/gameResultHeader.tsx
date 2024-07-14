@@ -2,7 +2,7 @@
 import { UseGameContext } from "@/store/GameContext";
 import { Box } from "@mui/material";
 
-export default function GameHeader() {
+export default function GameResultHeader() {
     const gameContext = UseGameContext()
     return (
         <Box display="flex" alignItems="center" sx={{ color: "#fff", fontSize: "0.7em" }}>
