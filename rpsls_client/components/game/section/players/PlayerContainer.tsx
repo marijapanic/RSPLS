@@ -15,7 +15,7 @@ export default function PlayerContainer(props: Props) {
             borderStyle: "solid",
             justifyContent: "center",
             borderColor: "#fff",
-            minHeight: "120px",
+            minHeight: "7.5em",
             p: "1em"
         }}>
             <Stack direction="column" justifyContent="space-evenly" alignItems="center">
