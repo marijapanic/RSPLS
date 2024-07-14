@@ -8,7 +8,7 @@ namespace Core.Shared
         {
             if (userChoice.Equals(computerChoice))
             {
-                return new GameOutcome(GameResult.Tie.ToString(), userChoice, computerChoice);
+                return new GameOutcome(GameResult.Tie.ToString().ToLower(), userChoice, computerChoice);
             }
 
             GameResult outcome = (userChoice, computerChoice) switch
@@ -21,7 +21,7 @@ namespace Core.Shared
                 _ => GameResult.Lose
             };
 
-            return new GameOutcome(outcome.ToString(), userChoice, computerChoice);
+            return new GameOutcome(outcome.ToString().ToLower(), userChoice, computerChoice);
         }
     }
 }
