@@ -15,11 +15,15 @@ export default function PlayerContainer(props: Props) {
             borderStyle: "solid",
             justifyContent: "center",
             borderColor: "#fff",
-            minHeight: "7.5em",
-            p: "1em"
+            minHeight: "5em",
+            p: "1em",
+            color: "#fff",
         }}>
             <Stack direction="column" justifyContent="space-evenly" alignItems="center">
-                <Box sx={{ textAlign: "center" }}>
+                <Box sx={{
+                    textAlign: "center",
+                    fontSize: "0.6em"
+                }}>
                     <h2>{props.userChoice}</h2>
                 </Box>
                 <Box>

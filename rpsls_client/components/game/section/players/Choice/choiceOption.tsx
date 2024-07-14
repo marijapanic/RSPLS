@@ -4,7 +4,7 @@ import Image from "next/image";
 interface Props {
     id: number;
     name: string;
-    handleChoiceClick: (id: number, name: string) => {}
+    handleChoiceClick: (id: number, name: string) => void
 }
 
 export default function ChoiceOption(props: Props) {

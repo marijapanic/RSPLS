@@ -29,7 +29,6 @@ export default function GameControlsResets() {
     <>
       {(gameContext.state.result.label !== '' || gameContext.state.games.total > 0) && (
         <>
-          <Divider />
           <Grid columns={[columns, null, columns]} gap="1em" display="flex" justifyContent="center">
             {gameContext.state.result.label !== '' && (
               <Box display="flex" justifyContent="center">
