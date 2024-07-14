@@ -1,4 +1,4 @@
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import GameHeader from "./gameNotification/gameNotification";
 import { UserPlayer } from "./players/userPlayer/userPlayer";
 import ComputerPlayer from "./players/ComputerPlayer/computerPlayer";
@@ -32,6 +32,11 @@ export default function GameSection() {
 
 async function LoadGame() {
   const response = await getPlayerChoices();
+
+  if (!response.length)
+  {
+    return <Typography>We couldn't retrieve the available options</Typography>
+  }
 
   return (
     <>
