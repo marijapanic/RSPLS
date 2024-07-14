@@ -5,7 +5,7 @@ import setDecisionUser from "@/actions/decisionUser";
 import { ChoiceState } from "@/models/choiceState";
 import ChoicesGrid from "../Choice/choiceGrid";
 import { useState } from "react";
-import { Alert } from "@mui/material";
+import { Alert, Typography } from "@mui/material";
 
 interface Props {
     choices: Array<ChoiceState>
@@ -50,7 +50,7 @@ export function UserPlayer(props: Props) {
                     (
                         <ChoicesGrid choices={props.choices} handleChoiceClick={onChoiceClick}></ChoicesGrid>
                     )}
-                {gameContext.state.decision.user !== '' && <p>{gameContext.state.decision.user}</p>}
+                {gameContext.state.decision.user !== '' && <Typography>{gameContext.state.decision.user}</Typography>}
             </>
         </PlayerContainer>
     );

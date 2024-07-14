@@ -11,18 +11,19 @@ export async function getPlayerChoices(): Promise<Array<ChoiceState>> {
     }
 }
 
-export async function getGameResult(userDecision: number): Promise<GameResult> {
-    try {
-        const optionsResponse = await fetch(`${process.env.NEXT_PUBLIC_CHOICES_DOMAIN}/api/play`, {
-            method: 'POST',
-            body: JSON.stringify({
-                player: userDecision
-            })
-        });
+export async function getRandomChoice(): Promise<ChoiceState> {
+    const optionsResponse = await fetch(`${process.env.NEXT_PUBLIC_CHOICES_DOMAIN}/api/choice`);
 
-        return await optionsResponse.json();
-    } catch (error) {
-        console.warn(error);
-        throw error;
-    }
+    return await optionsResponse.json();
+}
+
+export async function getGameResult(userDecision: number): Promise<GameResult> {
+    const optionsResponse = await fetch(`${process.env.NEXT_PUBLIC_CHOICES_DOMAIN}/api/play`, {
+        method: 'POST',
+        body: JSON.stringify({
+            player: userDecision
+        })
+    });
+
+    return await optionsResponse.json();
 }
