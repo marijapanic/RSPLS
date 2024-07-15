@@ -1,4 +1,4 @@
-﻿namespace Core.Choice
+﻿namespace Core.Choice.Models
 {
     public enum Choice
     {

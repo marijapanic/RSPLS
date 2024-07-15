@@ -1,4 +1,4 @@
-﻿using Core.Choice;
+﻿using Core.Choice.Models;
 using Core.Shared;
 
 namespace Application.Tests

@@ -1,6 +1,7 @@
-﻿using Core.Shared;
+﻿using Core.Choice.Models;
+using Core.Shared;
 
-namespace Core.Choice
+namespace Core.Choice.Abstractions
 {
     public interface IChoiceService
     {
