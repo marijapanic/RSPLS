@@ -1,5 +1,5 @@
 "use client"
-import PlayerContainer from "../PlayerContainer";
+import PlayerContainer from "../playerContainer";
 import { UseGameContext } from "@/store/gameContext";
 import setDecisionUser from "@/actions/decisionUser";
 import { ChoiceState } from "@/models/choiceState";

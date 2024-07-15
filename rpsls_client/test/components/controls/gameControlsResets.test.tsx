@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import GameControlsResets from '@/components/game/controls/gameControlsResets';
 import { UseGameContext } from '@/store/gameContext';
 
-jest.mock('../../../store/GameContext');
+jest.mock('../../../store/gameContext');
 
 const mockClearGame = jest.fn();
 const mockClearAll = jest.fn();

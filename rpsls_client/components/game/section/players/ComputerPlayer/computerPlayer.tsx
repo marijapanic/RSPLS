@@ -1,6 +1,6 @@
 "use client"
 import { Typography } from "@mui/material";
-import PlayerContainer from "../PlayerContainer";
+import PlayerContainer from "../playerContainer";
 import { UseGameContext } from "@/store/gameContext";
 
 export default function ComputerPlayer() {
