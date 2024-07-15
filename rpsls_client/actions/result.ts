@@ -1,5 +1,5 @@
 import { GameResult } from "@/models/choiceState";
-import { IGameResponse } from "@/store/GameContext";
+import { IGameResponse } from "@/store/gameContext";
 
 enum ResponseBuilder {
     Win = "win",

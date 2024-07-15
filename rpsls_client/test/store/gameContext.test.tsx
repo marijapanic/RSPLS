@@ -1,6 +1,6 @@
 import { render, act, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { GameContextProvider, UseGameContext, defaultState } from '@/store/GameContext';;
+import { GameContextProvider, UseGameContext, defaultState } from '@/store/gameContext';;
 
 const TestComponent = () => {
     const { state, clearGame, clearAll, updateState } = UseGameContext();

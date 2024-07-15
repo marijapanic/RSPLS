@@ -1,6 +1,6 @@
 "use client"
 
-import { UseGameContext } from "@/store/GameContext";
+import { UseGameContext } from "@/store/gameContext";
 import DeleteIcon from '@mui/icons-material/Delete';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import { Box, Button, Divider, Grid } from "@mui/material";
