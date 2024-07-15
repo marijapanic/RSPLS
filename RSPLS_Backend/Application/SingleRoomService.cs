@@ -1,18 +1,23 @@
-﻿using Core.Choice;
-using Core.Game;
+﻿using Core.Choice.Abstractions;
+using Core.Choice.Models;
+using Core.SingleRoom.Models;
 using Core.Shared;
 using Microsoft.AspNetCore.Http;
 using System.Text.Json;
+using Core.GameOutcome.Models;
+using Core.GameOutcome.Abstractions;
 
 namespace Application
 {
     public class SingleRoomService
     {
         private readonly IChoiceService _choiceService;
+        private readonly IGameOutcomeService _gameOutcomeService;
 
-        public SingleRoomService(IChoiceService choiceService)
+        public SingleRoomService(IChoiceService choiceService, IGameOutcomeService gameOutcomeService)
         {
             _choiceService = choiceService;
+            _gameOutcomeService = gameOutcomeService;
         }
 
         public async Task<Result<GameOutcome>> GetGameResult(HttpRequest httpRequest)
@@ -31,7 +36,7 @@ namespace Application
                 return Result<GameOutcome>.Failure(choiceResult.Error);
             }
 
-            return Result<GameOutcome>.Success(GameFinal.DetermineWinner(playerChoice.Data.Choice, choiceResult.Data.Id));
+            return Result<GameOutcome>.Success(_gameOutcomeService.DetermineWinner(playerChoice.Data.Choice, choiceResult.Data.Id));
         }
 
         private static async Task<Result<PlayerChoice>> ExtractPlayersChoice(HttpRequest httpRequest)

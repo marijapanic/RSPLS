@@ -1,5 +1,5 @@
 using Application;
-using Core.Choice;
+using Core.Choice.Models;
 using Core.Shared;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
