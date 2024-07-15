@@ -16,6 +16,7 @@ describe('NavLink', () => {
         render(<NavLink href="/">Home</NavLink>);
 
         const linkElement = screen.getByRole('link', { name: /Home/i });
+
         expect(linkElement).toBeInTheDocument();
         expect(linkElement).toHaveAttribute('href', '/');
     });
@@ -26,6 +27,7 @@ describe('NavLink', () => {
         render(<NavLink href="/">Home</NavLink>);
 
         const linkElement = screen.getByRole('link', { name: /Home/i });
+
         expect(linkElement).toHaveClass('active');
     });
 
@@ -35,6 +37,7 @@ describe('NavLink', () => {
         render(<NavLink href="/">Home</NavLink>);
 
         const linkElement = screen.getByRole('link', { name: /Home/i });
+
         expect(linkElement).not.toHaveClass('active');
     });
 });
