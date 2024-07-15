@@ -1,5 +1,5 @@
 "use client"
-import { UseGameContext } from "@/store/GameContext";
+import { UseGameContext } from "@/store/gameContext";
 import { Box } from "@mui/material";
 
 export default function GameResultHeader() {

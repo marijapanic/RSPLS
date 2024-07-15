@@ -3,7 +3,7 @@ import { UserPlayer } from "./players/userPlayer/userPlayer";
 import ComputerPlayer from "./players/ComputerPlayer/computerPlayer";
 import GameResults from "../results/gameResults";
 import GameControlsResets from "../controls/gameControlsResets";
-import { GameContextProvider } from "@/store/GameContext";
+import { GameContextProvider } from "@/store/gameContext";
 import { getPlayerChoices } from "@/agent/agent";
 import { Suspense } from "react";
 import LoadingOptions from "./players/Choice/loadingOptions";

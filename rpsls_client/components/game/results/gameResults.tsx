@@ -1,5 +1,5 @@
 "use client"
-import { UseGameContext } from "@/store/GameContext";
+import { UseGameContext } from "@/store/gameContext";
 import { Stack, Typography } from "@mui/material";
 import styles from "./gameResults.module.css"
 
