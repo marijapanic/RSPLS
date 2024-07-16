@@ -79,7 +79,7 @@ Rock, Paper, Scissors, Lizard, Spock is a game of chance that expands the tradit
 
 ### Backend
 
-The backend is an Azure Function built with .NET that handles game logic and stores game state.
+The backend is an Azure Function built with .NET that handles game logic.
 
 ### Frontend
 
